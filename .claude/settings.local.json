@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\SSAFY\\\\Desktop\\\\back\" -Recurse -Directory)",
+      "Bash(Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\SSAFY\\\\Desktop\\\\back\" -Directory | Where-Object { $_.Name -ne 'venv' } | Select-Object Name)",
+      "Bash(grep -E '\\\\.\\(py|txt|md\\)$')",
+      "Bash(venv\\\\Scripts\\\\pip install *)",
+      "PowerShell(.\\\\venv\\\\Scripts\\\\pip install djangorestframework django-cors-headers)",
+      "PowerShell(.\\\\venv\\\\Scripts\\\\pip freeze > requirements.txt)",
+      "PowerShell(.\\\\venv\\\\Scripts\\\\python manage.py migrate 2>&1)",
+      "PowerShell(.\\\\venv\\\\Scripts\\\\python manage.py check 2>&1)",
+      "PowerShell(New-Item *)",
+      "PowerShell(.\\\\venv\\\\Scripts\\\\python manage.py load_initial_data 2>&1)",
+      "Bash(venv/Scripts/python.exe -c \"import sqlite3; conn=sqlite3.connect\\('db.sqlite3'\\); c=conn.cursor\\(\\); c.execute\\(\\\\\"SELECT name FROM sqlite_master WHERE type='table'\\\\\"\\); print\\(c.fetchall\\(\\)\\)\")",
+      "Bash(venv/Scripts/python.exe -c \"import sqlite3; conn=sqlite3.connect\\('db.sqlite3'\\); c=conn.cursor\\(\\); c.execute\\('SELECT username FROM auth_user'\\); print\\(c.fetchall\\(\\)\\)\")",
+      "Bash(venv/Scripts/python.exe manage.py makemigrations baseball)",
+      "Bash(venv/Scripts/python.exe manage.py migrate)"
+    ]
+  }
+}
