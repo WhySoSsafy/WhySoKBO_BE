@@ -18,7 +18,7 @@ PLAYER_TAG_FIELDS = [
 # Q번호 → (왼쪽 태그, 오른쪽 태그) 매핑 (슬라이더 값 1=왼쪽, 5=오른쪽)
 TEAM_QUESTION_TAG_MAP = {
     1:  ('passion',     'stable'),
-    2:  ('passion',     'consistent'),
+    2:  ('passion',     'stable'),
     3:  ('trendy',      'traditional'),
     4:  ('emotional',   'stable'),
     5:  ('popular',     'underdog'),
